@@ -1,10 +1,11 @@
+![Logo](Assets/Instituto_Tecnológico.png)
 # eyodd_2026b
 __Repositorio__ de la materia de Estructura y Organización de Datos, semestre 2026B
 
 ## Competencias a desarrollar
 
-Identifica, selecciona y aplica eficientemente
-tipos de datos abstractos, métodos de
+Identificar, seleccionar y aplicar eficientemente
+los tipos de datos abstractos, métodos de
 ordenamiento y búsqueda para la optimización del
 rendimiento de soluciones de problemas del mundo
 real.
