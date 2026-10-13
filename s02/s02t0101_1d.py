@@ -25,7 +25,18 @@ array_01 = arr('i',[10,22,300,3,7,40,55,80,700,654,34])
 #print(len(array_01))
 
 #Iteración por indices
-for i in range(len(array_01)):
-    if array_01[i] % 2 == 0:
-        print(f"Elemento num: {i+1}: {array_01[i]}") #Números pares
-    #print(f"Elemento {i+1}: {array_01[i]}")
+# for i in range(len(array_01)):
+#     if array_01[i] % 2 == 0:
+        #print(f"Elemento num: {i+1}: {array_01[i]}") #Números pares
+
+#Búsqueda de un elemento
+num_to_search = 200
+
+#Modificando un valor
+#backet notation
+array_01[7] = 200
+
+try:
+    print(f"Localizando {num_to_search}: {array_01.index(num_to_search)}")
+except:
+    print("⚠️ Número no encontrado!!!")
