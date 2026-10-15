@@ -14,11 +14,18 @@ print("--- ANTES DE LA ELIMINACIÓN ---")
 print_array(array_01)
 
 #Eliminación
-try:
-    array_01.remove(100)
-except:
-    print("No se encuentra en el arreglo")
+#Buscar el elemento 10
+num_a_eliminar = 10
+counter = 0
+print(f"Se busca {num_a_eliminar} en el arreglo.")
+for integer in array_01:
+    if integer == num_a_eliminar:
+        array_01.remove(10)
+    counter += 1
+    if counter == len(array_01):
+        print("❌ Número no necontrado")
 
 print("--- DESPUES DE LA ELIMINACIÓN ---")
 print_array(array_01)
+print("🎊 Número(s) removido(s)")
 
