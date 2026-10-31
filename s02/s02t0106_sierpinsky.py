@@ -1,5 +1,15 @@
 from array import array as arr
 
+#Borra pantalla con caracteres ANSI
+def clear_screen():
+    print("\033[2J\033]H", end="")
+
+#ANSI color codes
+RED = "\033[91m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
 #Parametros de la cuadricula
 rows = 15
 columns = 2 * rows - 1
@@ -52,13 +62,13 @@ for row in range(1,rows):
         else:
             matriz[row][col] = 0
 
-def draw_matriz(matriz, symbol = "*"):
-    for row in matriz:
-        for value in row:
-            if value == 1:
-                print(symbol, end="")
+def draw_matriz(input_matriz, symbol = "■"):
+    for row in input_matriz:
+        for cell in row:
+            if cell == 1:
+                print(CYAN + symbol + RESET, end="")
             else:
-                print(" ", end="")
+                print(RED + " ", end="")
         print()
 
 draw_matriz(matriz)
