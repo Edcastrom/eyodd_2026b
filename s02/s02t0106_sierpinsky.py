@@ -1,7 +1,7 @@
 from array import array as arr
 
 #Parametros de la cuadricula
-rows = 10
+rows = 15
 columns = 2 * rows - 1
 
 #Función para imprimir la matriz
@@ -21,7 +21,7 @@ print(f"Cantidad de filas: {len(matriz)}")
 print(f"Cantidad de columnas: {len(matriz[0])}")
 
 #Calcular el centro de la 1° Fila
-center = columns // 2
+center = columns // 2 #División en enteros
 #Estableciendo el centro en 1
 matriz[0][center] = 1
 
@@ -52,5 +52,13 @@ for row in range(1,rows):
         else:
             matriz[row][col] = 0
 
-print()
-print_matriz(matriz)
+def draw_matriz(matriz, symbol = "*"):
+    for row in matriz:
+        for value in row:
+            if value == 1:
+                print(symbol, end="")
+            else:
+                print(" ", end="")
+        print()
+
+draw_matriz(matriz)
